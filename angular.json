@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "ngx-collapsible-sidebar": {
+      "projectType": "library",
+      "root": "projects/ngx-collapsible-sidebar",
+      "sourceRoot": "projects/ngx-collapsible-sidebar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-collapsible-sidebar/tsconfig.lib.json",
+            "project": "projects/ngx-collapsible-sidebar/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-collapsible-sidebar/src/test.ts",
+            "tsConfig": "projects/ngx-collapsible-sidebar/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-collapsible-sidebar/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-collapsible-sidebar/tsconfig.lib.json",
+              "projects/ngx-collapsible-sidebar/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ngx-collapsible-sidebar-example"
 }
