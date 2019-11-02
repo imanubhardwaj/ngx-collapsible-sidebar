@@ -1,0 +1,53 @@
+.ngx-collapsible-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 10px;
+  box-sizing: border-box;
+
+  &.collapsed {
+    width: 250px;
+    -webkit-animation: slide-in 0.5s forwards;
+    animation: slide-in 0.5s forwards;
+
+    ::ng-deep .hide-on-collapse {
+      display: none;
+    }
+  }
+
+  &.expanded {
+    width: 60px;
+    -webkit-animation: slide-out 0.5s forwards;
+    animation: slide-out 0.5s forwards;
+
+    ::ng-deep .hide-on-collapse {
+      display: block;
+    }
+  }
+
+  @-webkit-keyframes slide-out {
+    100% {
+      width: 250px;
+    }
+  }
+
+  @keyframes slide-out {
+    100% {
+      width: 250px;
+    }
+  }
+
+  @-webkit-keyframes slide-in {
+    100% {
+      width: 60px;
+    }
+  }
+
+  @keyframes slide-in {
+    100% {
+      width: 60px;
+    }
+  }
+}

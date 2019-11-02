@@ -13,10 +13,12 @@ import {TruncatePipe} from './pipes/truncate.pipe';
 import {RouterModule} from '@angular/router';
 import {MatIconModule} from '@angular/material';
 import {CommonModule} from '@angular/common';
+import {NgxCollapsibleSidebarComponent} from './components/ngx-collapsible-sidebar/ngx-collapsible-sidebar.component';
 
 const components = [
   NgxCollapsibleSidebarContainerComponent,
   NgxCollapsibleSidebarContentComponent,
+  NgxCollapsibleSidebarComponent,
   NgxCollapsibleSidebarItemComponent,
   NgxCollapsibleSidebarSubItemComponent
 ];
