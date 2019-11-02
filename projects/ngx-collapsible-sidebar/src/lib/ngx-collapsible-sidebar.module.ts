@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
-import { NgxCollapsibleSidebarComponent } from './ngx-collapsible-sidebar.component';
+// tslint:disable-next-line:max-line-length
+import {NgxCollapsibleSidebarContainerComponent} from './components/ngx-collapsible-sidebar-container/ngx-collapsible-sidebar-container.component';
 
-
+const components = [
+  NgxCollapsibleSidebarContainerComponent,
+];
 
 @NgModule({
-  declarations: [NgxCollapsibleSidebarComponent],
+  declarations: [...components],
   imports: [
   ],
-  exports: [NgxCollapsibleSidebarComponent]
+  exports: [...components]
 })
 export class NgxCollapsibleSidebarModule { }
