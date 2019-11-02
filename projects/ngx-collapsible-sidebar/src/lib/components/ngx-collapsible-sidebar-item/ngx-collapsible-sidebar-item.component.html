@@ -1,0 +1,30 @@
+<div [routerLink]="path" class="ngx-collapsible-sidebar-item" [ngClass]="active ? 'active' : ''">
+  <div [ngClass]="!collapsed ? 'highlight' : ''" class="header">
+
+    <!--    Template Rendering for Collapsed Items-->
+    <ng-container *ngIf="!collapsedItem">
+      <mat-icon class="ngx-collapsible-sidebar-item-icon" [ngStyle]="{color: collapsed ? 'black' : color}">{{icon}}</mat-icon>
+    </ng-container>
+    <ng-container *ngIf="collapsedItem">
+      <div>
+        <ng-container *ngTemplateOutlet="collapsedItem"></ng-container>
+      </div>
+    </ng-container>
+
+    <!--    Template Rendering for Expanded Items-->
+    <ng-container *ngIf="!expandedItem">
+      <span class="ngx-collapsible-sidebar-item-title" [ngStyle]="{color: collapsed ? 'black' : color}"
+            ngxHideOnCollapse>{{title | truncate: 10}}</span>
+    </ng-container>
+    <ng-container *ngIf="expandedItem">
+      <div ngxHideOnCollapse>
+        <ng-container *ngTemplateOutlet="expandedItem"></ng-container>
+      </div>
+    </ng-container>
+  </div>
+  <div *ngIf="!collapsed && items.length" class="content" ngxHideOnCollapse>
+    <ul>
+    <ng-content></ng-content>
+    </ul>
+  </div>
+</div>

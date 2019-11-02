@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {NgxCollapsibleSidebarContainerComponent} from './components/ngx-collapsible-sidebar-container/ngx-collapsible-sidebar-container.component';
 // tslint:disable-next-line:max-line-length
 import {NgxCollapsibleSidebarContentComponent} from './components/ngx-collapsible-sidebar-content/ngx-collapsible-sidebar-content.component';
+import {NgxCollapsibleSidebarItemComponent} from './components/ngx-collapsible-sidebar-item/ngx-collapsible-sidebar-item.component';
 // tslint:disable-next-line:max-line-length
 import {NgxCollapsibleSidebarSubItemComponent} from './components/ngx-collapsible-sidebar-sub-item/ngx-collapsible-sidebar-sub-item.component';
 import {ExpandedSidebarItemDirective} from './directives/expanded-sidebar-item.directive';
@@ -16,6 +17,7 @@ import {CommonModule} from '@angular/common';
 const components = [
   NgxCollapsibleSidebarContainerComponent,
   NgxCollapsibleSidebarContentComponent,
+  NgxCollapsibleSidebarItemComponent,
   NgxCollapsibleSidebarSubItemComponent
 ];
 

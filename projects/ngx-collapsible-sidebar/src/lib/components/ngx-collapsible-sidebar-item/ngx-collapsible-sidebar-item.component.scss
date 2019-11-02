@@ -1,0 +1,25 @@
+@import "../../sass/flex-styles";
+
+.ngx-collapsible-sidebar-item {
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  .header {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    @include fx-layout-with-gap(row, 20px);
+    @include fx-layout-alignment(flex-start, center);
+
+    span {
+      min-width: 105px;
+    }
+  }
+
+  .content {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
