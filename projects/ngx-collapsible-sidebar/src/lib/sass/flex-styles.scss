@@ -1,0 +1,58 @@
+/* These mixins are replacement of Flex Layout*/
+// Given css will be added only for the specified size classes.
+// For DOM containers
+// Replacement of fxLayout
+// eg, fxLayout="row" -> @include vs-fx-layout(row)
+@mixin fx-layout($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+// For DOM containers
+// Replacement of fxLayout with fxLayoutGap
+// eg, fxLayout="row" fxLayoutGap="10px" -> @include vs-fx-layout-with-gap(row, 10px)
+@mixin fx-layout-with-gap($direction, $value) {
+  @include fx-layout($direction);
+  @if ($direction == row) {
+    > * {
+      margin-right: $value;
+    }
+    > *:last-child {
+      margin-right: 0;
+    }
+  } @else if ($direction == column) {
+    > * {
+      margin-bottom: $value;
+    }
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  } @else if ($direction == reverse-row) {
+    > * {
+      margin-left: $value;
+    }
+    > *:last-child {
+      margin-left: 0;
+    }
+  } @else if ($direction == reverse-column) {
+    > * {
+      margin-top: $value;
+    }
+    > *:last-child {
+      margin-top: 0;
+    }
+  }
+}
+
+// For DOM containers
+// Replacement of fxLayoutAlign
+// eg, fxLayoutAlignment="start center" -> @include vs-fx-layout-alignment(start, center)
+@mixin fx-layout-alignment(
+  $main-axis-alignment,
+  $cross-axis-alignment
+) {
+  justify-content: $main-axis-alignment;
+  align-items: $cross-axis-alignment;
+  align-content: $cross-axis-alignment;
+}
+

@@ -1,0 +1,4 @@
+<li (click)="$event.stopPropagation()" [routerLink]="path" class="ngx-collapsible-sidebar-sub-item"
+     [ngStyle]="{color: color}" routerLinkActive="active">
+  {{title | truncate: 10}}
+</li>

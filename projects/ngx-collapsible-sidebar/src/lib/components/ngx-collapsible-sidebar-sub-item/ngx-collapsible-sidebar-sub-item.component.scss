@@ -1,0 +1,10 @@
+.ngx-collapsible-sidebar-sub-item {
+  outline: none;
+  padding: 10px;
+
+  &:not(.active) {
+    color: black !important;
+  }
+}
+
+
