@@ -1,4 +1,4 @@
-import {AfterContentInit, Component, ContentChildren, Input, OnDestroy, QueryList} from '@angular/core';
+import {AfterContentInit, Component, ContentChildren, Input, QueryList} from '@angular/core';
 import {NgxCollapsibleSidebarItemComponent} from '../ngx-collapsible-sidebar-item/ngx-collapsible-sidebar-item.component';
 import {NavigationEnd, Router} from '@angular/router';
 import {filter, takeUntil} from 'rxjs/operators';
@@ -9,7 +9,7 @@ import {Unsubscribe} from '../unsubscribe';
   templateUrl: './ngx-collapsible-sidebar.component.html',
   styleUrls: ['./ngx-collapsible-sidebar.component.scss']
 })
-export class NgxCollapsibleSidebarComponent extends Unsubscribe implements AfterContentInit, OnDestroy {
+export class NgxCollapsibleSidebarComponent extends Unsubscribe implements AfterContentInit {
   @Input() collapsed: boolean;
   @Input() highlightColor: string;
   @ContentChildren(NgxCollapsibleSidebarItemComponent) items: QueryList<NgxCollapsibleSidebarItemComponent>;
@@ -35,6 +35,4 @@ export class NgxCollapsibleSidebarComponent extends Unsubscribe implements After
       }
     });
   }
-
-  ngOnDestroy(): void {}
 }
