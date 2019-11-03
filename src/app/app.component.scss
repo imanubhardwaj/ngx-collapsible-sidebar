@@ -1,0 +1,25 @@
+::ng-deep {
+  .ngx-collapsible-sidebar {
+    background: #10395e;
+  }
+
+  ngx-collapsible-sidebar-content {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .ngx-collapsible-sidebar-item {
+    &.active {
+      background-color: white;
+      border-radius: 4px;
+
+      .custom-icon, .custom-text, .ngx-collapsible-sidebar-item-title, .ngx-collapsible-sidebar-item-icon {
+        color: #10395e !important;
+      }
+    }
+
+    .custom-icon, .custom-text, .ngx-collapsible-sidebar-item-title, .ngx-collapsible-sidebar-item-icon {
+      color: white !important;
+    }
+  }
+}
