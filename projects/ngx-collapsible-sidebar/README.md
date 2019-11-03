@@ -1,24 +1,17 @@
 # NgxCollapsibleSidebar
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.13.
+A simple sidenav that gives the functionality for the collapsed view of the sidebar.
 
-## Code scaffolding
+## Installation:
 
-Run `ng generate component component-name --project ngx-collapsible-sidebar` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-collapsible-sidebar`.
-> Note: Don't forget to add `--project ngx-collapsible-sidebar` or else it will be added to the default project in your `angular.json` file. 
+#### via npm:
 
-## Build
+```
+$ npm install ngx-collapsible-sidebar --save
+```
 
-Run `ng build ngx-collapsible-sidebar` to build the project. The build artifacts will be stored in the `dist/` directory.
+> Note: You need to have `angular-material` as dependency on your project. Currently we only support Angular Material design. 
 
-## Publishing
+## Usage
 
-After building your library with `ng build ngx-collapsible-sidebar`, go to the dist folder `cd dist/ngx-collapsible-sidebar` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-collapsible-sidebar` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You can see the `src` folder that contains an example demonstrating the full usage of the package.

@@ -1,7 +1,7 @@
 {
   "name": "ngx-collapsible-sidebar",
   "description": "A simple sidenav that gives the functionality for the collapsed view of the sidebar.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Manu Bhardwaj",
   "homepage": "https://github.com/imanubhardwaj/ngx-collapsible-sidebar",
   "license": "MIT",
