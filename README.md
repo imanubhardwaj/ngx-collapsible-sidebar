@@ -15,3 +15,5 @@ $ npm install ngx-collapsible-sidebar --save
 ## Usage
 
 You can see the `src` folder that contains an example demonstrating the full usage of the package.
+
+#### [Demo](https://ngx-collapsible-sidebar.manubhardwaj.in/)
